@@ -1,0 +1,291 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+font-family:'danny';
+src: url('fonts/fontawesome-webfont.ttf') format('truetype');
+
+}
+
+
+/*debut du code de la page d'acceuil*/
+* {
+	font-family:'danny';
+}
+.inner{
+	width: 80%;
+	margin: auto;
+}
+
+.menu {
+	padding-top: 10px;
+	background:white;
+	width:100%;
+	height: 66px;
+	line-height: 66px;
+	
+}
+
+
+.m-left {
+	float:left;
+
+}
+
+.logo{
+	margin:  0;padding: 0;
+}
+.m-right{
+	float: right;
+  word-spacing:20px;
+  height: 100%;
+}
+
+.m-right a:hover{
+	
+	text-decoration: overline #87CEFA;
+
+	
+}
+
+.m-right a{
+
+}
+.m-link {
+
+	text-decoration: none;
+	color: black;
+	background-color: white;
+}
+
+.newbg{
+	    background-repeat: no-repeat;
+        width: 100%;
+        height:600px;
+        background-size: cover;
+        
+       }
+
+
+
+
+
+
+
+.texte{
+
+  position: absolute;
+  bottom:200px ;
+  left: 90px;
+  font-size: 14px;
+  color:white;
+ 
+}
+
+.texte h3{
+	font-size: 2.6vw
+}
+
+span{
+	color: #1E90FF;
+}
+
+.bouton a {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background-color: #1E90FF;
+color:white;
+text-decoration:none;
+
+}
+
+.bouton a:hover {
+background-color: #00BFFF;
+}
+
+/* fin de la page d acceuil
+
+/* Debut page Services */
+
+.entete{
+ 
+	text-align: center;
+
+}
+
+.imagegauche{
+  width: 30%;
+  float:left;
+  padding:50px;
+}
+
+.pointbleu{
+
+}
+
+.descriptiondroite{
+
+width:30%;
+float:right;
+margin-right: 20px;
+padding:50px 
+}
+
+.dp{
+	display:none;
+}
+
+/*fin de code services 
+
+Debut du code Portfolio*/
+.choix{
+	
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+
+
+}
+.enteteprojet{
+	text-align: center;
+	padding-top: 470px;
+}
+
+.choix > div{
+	padding: 10px;
+
+}
+.e1 {
+	background-color:#DCDCDC;
+
+}
+
+.e1:hover{
+	background-color: #6495ED;
+	color:white;
+}
+
+.e2{
+	background-color:#DCDCDC;
+}
+.e2:hover{
+	background-color: #6495ED;
+	color:white;
+}
+
+.e3{
+	
+	background-color:#DCDCDC;
+}
+.e3:hover{
+	background-color: #6495ED;
+	color:white;
+}
+
+.e4{
+	background-color:#DCDCDC
+}
+.e4:hover{
+	background-color: #6495ED;
+	color:white;
+}
+
+.photoprojet{
+	display: flex;
+	flex-wrap:wrap;
+
+}
+.photoprojet > div{
+	padding:20px;
+}
+
+/* debut de Contact.html*/
+.fonduphone{
+	display: none;
+}
+
+.gmaps{
+
+position: absolute;
+	z-index: 2;
+height:550px;
+width: 100%;
+
+}
+
+.jspcamarche{
+padding: 30px;
+}
+.texteduformulaire{
+	text-align: center;
+}
+form{
+	display: flex;
+	flex-direction: column;
+position: absolute;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    z-index:4;
+ right:90px;
+
+    background-color:#FFFFFF;
+    opacity: 0.8;	`
+  
+}
+
+  form div + div { 
+  margin-top: 1em;
+}
+
+label {
+	  display: inline-block;
+  width: 20px;
+  opacity:1.0;
+
+}
+
+input,textarea{
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {  
+	border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 12em;
+}
+
+.button {
+
+  padding-left: 20px;
+
+}
+
+button {
+ background-color: #1E90FF;
+    display:block;
+    line-height:30px;
+    width: 120px;
+background-color: #1E90FF;
+color:white;
+text-decoration:none;
+
+}
+
+@media screen and (max-width: 720px)
+{
+
+}
+
