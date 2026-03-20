@@ -2,153 +2,318 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>WEBAGENCY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistant options Promotelec</title>
   <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" media="screen and (max-width: 720px)" href="smallscreen.css" type="text/css" />
+  <link rel="stylesheet" media="screen and (max-width: 720px)" href="smallscreen.css" type="text/css">
 </head>
-
 <body>
-
-
-<header role="header">
-
-
-
-	<nav class="menu" role="navigation">
-
-		<div class="inner">
-
-      <div class="m-left">
-        <img src="logo.png" class="lelogo" alt="logo de Webagency"/>
-
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">MVP d’aide à la décision</p>
+        <h1>Quelles options Promotelec sont activables&nbsp;?</h1>
+        <p class="hero__text">
+          Cette application croise les données issues du DPE, des études thermiques disponibles et des justificatifs
+          du dossier afin d’identifier les options Promotelec les plus plausibles pour un projet de rénovation.
+        </p>
+        <a class="hero__link" href="https://www.promotelec.com/app/uploads/sites/2/2026/03/PRO-1525-10_REFERENTIEL-RENOVATION-RESPONSABLE_Fevrier-2026.pdf" target="_blank" rel="noreferrer">Ouvrir le référentiel</a>
       </div>
-
-      <div class="m-right">
-      <a href="Index.html"class="m-link">Accueil</a>
-      <a href="Services.html"class="m-link">Services</a>
-      <a href="Portfolio.html"class="m-link">Portfolio</a>
-      <a href="Contact.hmtl"class="m-link">Contact</a>
+      <div class="hero__card">
+        <h2>Référentiels utilisés</h2>
+        <ul>
+          <li>PRO-1525-10 — Référentiel Rénovation Responsable, février 2026.</li>
+          <li>PRO-1605-3 — Annexe au Référentiel Rénovation Responsable, février 2026.</li>
+        </ul>
+        <p>Le moteur de règles ci-dessous est volontairement transparent et explicable : chaque option affiche pourquoi elle est compatible ou bloquée.</p>
       </div>
-     </div>
-	</nav>
+    </header>
 
-</header>
+    <main class="layout">
+      <section class="panel panel--form">
+        <div class="panel__header">
+          <h2>Paramètres projet</h2>
+          <p>Renseignez les éléments disponibles dans votre DCE / dossier technique.</p>
+        </div>
 
-<div class="contenu">
-<img src="bg1.jpg" class="newbg" alt="la photo"/>
-      <div class="texte">
-<h3><span>WEBAGENCY</span>: L'AGENCE DE TOUS<br>
- VOS PROJETS !</h3><br>
-<p>Vous avez un projet web ? La WebAgency vous aide a le realiser !<br>
-<br><br><br>
-<div class="bouton">
-   <a href="Services.html">Plus d'infos</a>
- </p>
-</div>
-</div>
-</p></div>
+        <form id="eligibility-form" class="form-grid">
+          <label>
+            Type de projet
+            <select name="projectType">
+              <option value="renovation">Rénovation</option>
+              <option value="acquisition">Acquisition / propriété</option>
+            </select>
+          </label>
 
+          <label>
+            DPE énergie initial
+            <select name="dpeInitial">
+              <option value="unknown">Inconnu</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+            </select>
+          </label>
 
-<div class="entete">
-<h1> NOS SERVICES </h1> <br><br>
-<p><img src="pointbleu.png" class="pointbleu"></p><br>
-<br>
-<p>Aujourd'hui toutes les entreprises ont besoin d'un site web performant. La WebAgency s'occupe<br> de la creation et de la gestion de votre site web.</p>
-</div>
+          <label>
+            DPE énergie projeté
+            <select name="dpeProjected">
+              <option value="unknown">Inconnu</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+            </select>
+          </label>
 
-<div class="imagegauche">
-<img src="main-feature.png" alt="image du service">
-</div>
+          <label>
+            Gain énergétique global (%)
+            <input type="number" name="energyGain" min="0" max="100" step="1" value="35">
+          </label>
 
-<div class="descriptiondroite">
-	<ul>
-		<li><span>UX design</span><br>
-		Nous prenons en compte et anticipons les attentes et les besoins de l’utilisateur pour créer un site web. L’objectif final est de rendre votre site accessible, facile à prendre en main et surtout efficace.</li>
-       
-        <li><span>UI design</span><br>
-        	 Nous travaillons sur le design afin de bien comprendre et assimiler les objectifs communicationnels du client, son image de marque ainsi que les besoins de la clientèle cible.   Notre créativité vous permettra d’arriver à produire un résultat qui sera efficient selon le contexte d’utilisation. </li>
+          <label>
+            CEP projeté (kWhep/m².an)
+            <input type="number" name="cepProjected" min="0" step="1" placeholder="ex. 120">
+          </label>
 
-        <li><span>SEO</span><br>
-        	 Nous mettons en places les diverses techniques ayant pour objectif le référencement et l'amelioration de la visibilité de votre site web en vous faisant gagner des places sur les moteurs de recherche (Google, mais aussi Yahoo !, Bing, etc.). Le but est de faire se rencontrer les internautes intéressés par des produits / services ou du contenu informatif.</li>
-    </ul>
-</div>
-<div class="dp">
-	<h3>UX design</h3><br>
-	Nous prenons en compte et anticipons les attentes et les besoins de l’utilisateur pour créer un site web. L’objectif final est de rendre votre site accessible, facile à prendre en main et surtout efficace.
-	<br>
-	<h3>UI design</h3><br>
-	 Nous travaillons sur le design afin de bien comprendre et assimiler les objectifs communicationnels du client, son image de marque ainsi que les besoins de la clientèle cible.   Notre créativité vous permettra d’arriver à produire un résultat qui sera efficient selon le contexte d’utilisation.<br>
-	 <h3>SEO</h3><br>
-	 Nous mettons en places les diverses techniques ayant pour objectif le référencement et l'amelioration de la visibilité de votre site web en vous faisant gagner des places sur les moteurs de recherche (Google, mais aussi Yahoo !, Bing, etc.). Le but est de faire se rencontrer les internautes intéressés par des produits / services ou du contenu informatif.<br>
-</div>
+          <label>
+            Étude thermique disponible
+            <select name="studyType">
+              <option value="none">Aucune</option>
+              <option value="3cl">Calcul 3CL-DPE 2021</option>
+              <option value="thce">Th-C-E ex</option>
+              <option value="both">3CL-DPE 2021 + Th-C-E ex</option>
+            </select>
+          </label>
 
+          <fieldset class="full-span checklist">
+            <legend>Justificatifs / études complémentaires</legend>
+            <label><input type="checkbox" name="hasAudit"> Audit énergétique</label>
+            <label><input type="checkbox" name="hasAcv"> Étude ACV / indicateurs E+C-</label>
+            <label><input type="checkbox" name="hasBbca"> Calcul / justificatif BBCA rénovation</label>
+            <label><input type="checkbox" name="hasClimateStudy"> Analyse des risques climatiques / adaptation</label>
+            <label><input type="checkbox" name="hasWaterStudy"> Analyse eau / gestion des consommations</label>
+            <label><input type="checkbox" name="hasBiodiversityStudy"> Analyse biodiversité / écologie du site</label>
+          </fieldset>
+        </form>
+      </section>
 
-<div class="enteteprojet">
-<h1> Nos Projets </h1> <br><br>
-<p><img src="pointbleu.png" class="pointbleu"></p><br>
-<br>
-<p>
-La WebAgency est fiere de vous presenter les differents projets sur lesquels elle collabore.</p>
-</div>
+      <section class="panel panel--results">
+        <div class="panel__header">
+          <h2>Options activables</h2>
+          <p>Résultat indicatif à confirmer par revue détaillée du référentiel et du dossier technique.</p>
+        </div>
 
+        <div id="summary" class="summary"></div>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
 
-<div class="choix">
-	<div class="e1"> All Works </div>
-	<div class="e2"> Creative </div>
-	<div class="e3"> Corporate </div>
-	<div class="e4"> Portfolio</div>
+    <section class="panel panel--rules">
+      <div class="panel__header">
+        <h2>Hypothèses métier embarquées</h2>
+      </div>
+      <div class="rules">
+        <article>
+          <h3>Options fondées sur le DPE / CEP</h3>
+          <p>Le moteur vérifie principalement la classe DPE projetée, le gain énergétique et la présence d’un calcul 3CL-DPE 2021 ou Th-C-E ex.</p>
+        </article>
+        <article>
+          <h3>Options avancées</h3>
+          <p>Les options Taxonomie, BBCA ou Effinergie demandent des justificatifs complémentaires. L’application les matérialise sous forme de cases à cocher pour préparer le DCE.</p>
+        </article>
+        <article>
+          <h3>Limite actuelle</h3>
+          <p>Ce MVP n’automatise pas encore les contrôles détaillés de tous les chapitres Promotelec. Il sert de filtre rapide avant revue experte.</p>
+        </article>
+      </div>
+    </section>
+  </div>
 
-</div>
+  <script>
+    const OPTION_RULES = [
+      {
+        id: 'bbc-2024',
+        title: 'Label BBC Effinergie rénovation résidentiel 2024',
+        source: 'Annexe Promotelec — option BBC Effinergie rénovation résidentiel 2024',
+        evaluate(data) {
+          const ok = ['3cl', 'both'].includes(data.studyType) && data.dpeProjected === 'A' && data.energyGain >= 35;
+          return {
+            eligible: ok,
+            reasons: [
+              data.dpeProjected === 'A' ? 'DPE projeté en classe A.' : 'Classe A non atteinte au DPE projeté.',
+              data.energyGain >= 35 ? 'Gain énergétique cohérent avec un niveau BBC rénovation.' : 'Gain énergétique trop faible pour un pré-filtrage BBC.',
+              ['3cl', 'both'].includes(data.studyType) ? 'Calcul 3CL-DPE 2021 disponible.' : 'Calcul 3CL-DPE 2021 requis pour instruire cette option.'
+            ]
+          };
+        }
+      },
+      {
+        id: 'bbc-2009',
+        title: 'Attestation BBC Rénovation 2009',
+        source: 'Annexe Promotelec — option Attestation BBC Rénovation 2009',
+        evaluate(data) {
+          const ok = ['thce', 'both'].includes(data.studyType) && Number.isFinite(data.cepProjected) && data.cepProjected <= 104;
+          return {
+            eligible: ok,
+            reasons: [
+              ['thce', 'both'].includes(data.studyType) ? 'Étude Th-C-E ex disponible.' : 'Étude Th-C-E ex manquante.',
+              Number.isFinite(data.cepProjected) ? `CEP projeté saisi : ${data.cepProjected} kWhep/m².an.` : 'CEP projeté non renseigné.',
+              Number.isFinite(data.cepProjected) && data.cepProjected <= 104 ? 'CEP compatible avec un pré-filtrage BBC 2009.' : 'CEP au-dessus du seuil indicatif BBC 2009 (hors modulations).'
+            ]
+          };
+        }
+      },
+      {
+        id: 'hpe-2009',
+        title: 'Attestation HPE Rénovation 2009',
+        source: 'Annexe Promotelec — option Attestation HPE Rénovation 2009',
+        evaluate(data) {
+          const ok = ['thce', 'both'].includes(data.studyType) && Number.isFinite(data.cepProjected) && data.cepProjected <= 150;
+          return {
+            eligible: ok,
+            reasons: [
+              ['thce', 'both'].includes(data.studyType) ? 'Étude Th-C-E ex disponible.' : 'Étude Th-C-E ex obligatoire.',
+              Number.isFinite(data.cepProjected) && data.cepProjected <= 150 ? 'CEP projeté sous 150 kWhep/m².an.' : 'CEP projeté supérieur à 150 kWhep/m².an ou absent.'
+            ]
+          };
+        }
+      },
+      {
+        id: 'taxo-attenuation',
+        title: 'Taxonomie — Atténuation du changement climatique',
+        source: 'Annexe Promotelec — option Taxonomie atténuation',
+        evaluate(data) {
+          const ok = data.projectType === 'renovation' && data.energyGain >= 30 && (data.dpeProjected === 'A' || (Number.isFinite(data.cepProjected) && data.cepProjected <= 135)) && data.hasAudit;
+          return {
+            eligible: ok,
+            reasons: [
+              data.projectType === 'renovation' ? 'Projet de rénovation confirmé.' : 'Cette logique MVP cible l’activité rénovation.',
+              data.energyGain >= 30 ? 'Gain énergétique ≥ 30 %.' : 'Gain énergétique < 30 %.',
+              data.dpeProjected === 'A' || (Number.isFinite(data.cepProjected) && data.cepProjected <= 135) ? 'Performance énergétique compatible avec le filtre taxonomie.' : 'DPE A ou CEP ≤ 135 attendu.',
+              data.hasAudit ? 'Audit / justificatif énergétique disponible.' : 'Audit ou justificatif énergétique attendu.'
+            ]
+          };
+        }
+      },
+      {
+        id: 'taxo-adaptation',
+        title: 'Taxonomie — Adaptation au changement climatique',
+        source: 'Annexe Promotelec — option Taxonomie adaptation',
+        evaluate(data) {
+          const ok = data.hasClimateStudy && ['A', 'B', 'C'].includes(data.dpeProjected);
+          return {
+            eligible: ok,
+            reasons: [
+              data.hasClimateStudy ? 'Analyse des risques climatiques renseignée.' : 'Analyse d’adaptation climatique manquante.',
+              ['A', 'B', 'C'].includes(data.dpeProjected) ? 'Niveau énergétique projeté compatible avec une logique d’adaptation/acquisition.' : 'Classe énergétique projetée insuffisante pour ce pré-filtrage.'
+            ]
+          };
+        }
+      },
+      {
+        id: 'bbca',
+        title: 'Option BBCA rénovation',
+        source: 'Annexe Promotelec — option BBCA rénovation',
+        evaluate(data) {
+          const ok = data.hasBbca && data.hasAcv && data.energyGain >= 20;
+          return {
+            eligible: ok,
+            reasons: [
+              data.hasBbca ? 'Justificatif BBCA disponible.' : 'Calcul BBCA manquant.',
+              data.hasAcv ? 'Étude ACV / E+C- disponible.' : 'Étude ACV / E+C- requise.',
+              data.energyGain >= 20 ? 'Gain énergétique cohérent avec une rénovation bas carbone.' : 'Gain énergétique trop faible pour ce pré-filtrage BBCA.'
+            ]
+          };
+        }
+      },
+      {
+        id: 'eau',
+        title: 'Option gestion responsable de l’eau',
+        source: 'Référentiel Promotelec — volet eau',
+        evaluate(data) {
+          return {
+            eligible: data.hasWaterStudy,
+            reasons: [data.hasWaterStudy ? 'Étude / prescriptions de gestion de l’eau disponibles.' : 'Ajouter les justificatifs eau dans le DCE.']
+          };
+        }
+      },
+      {
+        id: 'biodiversite',
+        title: 'Option biodiversité / intégration écologique',
+        source: 'Référentiel Promotelec — volet environnement local',
+        evaluate(data) {
+          return {
+            eligible: data.hasBiodiversityStudy,
+            reasons: [data.hasBiodiversityStudy ? 'Analyse biodiversité ou écologie du site disponible.' : 'Analyse biodiversité absente du dossier.']
+          };
+        }
+      }
+    ];
 
+    const form = document.getElementById('eligibility-form');
+    const resultsNode = document.getElementById('results');
+    const summaryNode = document.getElementById('summary');
 
-<div class="photoprojet">
- <div class="p1"><img src="portfolio/01.jpg"></div>
- <div class="p2"><img src="portfolio/02.jpg"></div>
- <div class="p3"><img src="portfolio/03.jpg"></div>
- <div class="p4"><img src="portfolio/04.jpg"></div>
- <div class="p5"><img src="portfolio/05.jpg"></div>
- <div class="p6"><img src="portfolio/06.jpg"></div>
- <div class="p7"><img src="portfolio/07.jpg"></div>
- <div class="p8"><img src="portfolio/08.jpg"></div>
- 
+    function getData() {
+      const formData = new FormData(form);
+      const rawCep = formData.get('cepProjected');
+      return {
+        projectType: formData.get('projectType'),
+        dpeInitial: formData.get('dpeInitial'),
+        dpeProjected: formData.get('dpeProjected'),
+        energyGain: Number(formData.get('energyGain') || 0),
+        cepProjected: rawCep ? Number(rawCep) : NaN,
+        studyType: formData.get('studyType'),
+        hasAudit: formData.get('hasAudit') === 'on',
+        hasAcv: formData.get('hasAcv') === 'on',
+        hasBbca: formData.get('hasBbca') === 'on',
+        hasClimateStudy: formData.get('hasClimateStudy') === 'on',
+        hasWaterStudy: formData.get('hasWaterStudy') === 'on',
+        hasBiodiversityStudy: formData.get('hasBiodiversityStudy') === 'on'
+      };
+    }
 
-</div>
+    function render() {
+      const data = getData();
+      const evaluations = OPTION_RULES.map((rule) => ({ ...rule, ...rule.evaluate(data) }));
+      const eligibleCount = evaluations.filter((item) => item.eligible).length;
 
+      summaryNode.innerHTML = `
+        <div>
+          <strong>${eligibleCount}</strong> option(s) potentiellement activable(s)
+        </div>
+        <div>
+          DPE projeté : <strong>${data.dpeProjected === 'unknown' ? 'non renseigné' : data.dpeProjected}</strong>
+          · Étude : <strong>${data.studyType}</strong>
+        </div>
+      `;
 
-<div class="gmaps">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2214246079734!2d2.3476369150181413!3d48.87305530762912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1547103634867" width="100%" height="640px" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+      resultsNode.innerHTML = evaluations.map((item) => `
+        <article class="result-card ${item.eligible ? 'result-card--ok' : 'result-card--ko'}">
+          <div class="result-card__top">
+            <div>
+              <p class="result-card__eyebrow">${item.source}</p>
+              <h3>${item.title}</h3>
+            </div>
+            <span class="badge">${item.eligible ? 'Activable' : 'À compléter'}</span>
+          </div>
+          <ul>
+            ${item.reasons.map((reason) => `<li>${reason}</li>`).join('')}
+          </ul>
+        </article>
+      `).join('');
+    }
 
-
-<div class="jspcamarche">
-	<form action="leformulaire" method="post">
-	<div class=texteduformulaire>
-		<h3>Contact Info</h3><br>
-		<p>WebAgency SAS<br>
-			25 Rue d'Hauteville 75010 Paris<br>
-			Tel:01 02 03 04 05 </p>
-	</div>
-    <div>
-        <label for="name"></label>
-        <input type="text" id="name"placeholder="Name" name="user_name">
-    </div>
-    <div>
-        <label for="mail"></label>
-        <input type="email" id="mail"placeholder="E-mail" name="user_mail">
-    </div>
-    <div>
-    	<label for="Subject"></label>
-    	<input type="text" id="sujet" placeholder="Subject" name="user_subject">
-    </div>
-    <div>
-        <label for="msg"></label>
-        <textarea id="msg" placeholder="Message" name="user_message"></textarea>
-    </div>
-    <div class="button">
-        <button type="submit">Send Message</button>
-    </div>
-
-</form>
-</div>
+    form.addEventListener('input', render);
+    render();
+  </script>
 </body>
 </html>
